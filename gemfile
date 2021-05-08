@@ -1,0 +1,13 @@
+source "https://rubygems.org"
+
+ruby '2.7.0'
+
+gem 'uri', '~> 0.10.1'
+gem 'net-http', '~> 0.1.1'
+gem 'crack', '~> 0.4.5'
+gem 'resolv-replace', '~> 0.1.0'
+
+
+
+
+
