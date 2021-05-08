@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '../lib/guzzler.rb'
+require 'guzzler'
 
 class GuzzlerTest < MiniTest::Test
 
@@ -58,5 +58,10 @@ class GuzzlerTest < MiniTest::Test
   def test_fuel_eco_with_two_args
     fuel_eco = Guzzler::Vehicle.new(34410).fuel_eco(driving_type: 'city', unit: 'mpg')
     assert_equal("16.0", fuel_eco)
+  end
+
+  def test_fuel_eco_with_all_args
+    fuel_eco = Guzzler::Vehicle.new(34410).fuel_eco(driving_type: 'city', unit: 'mpg', round: false)
+    assert_equal("16.0289", fuel_eco)
   end
 end
